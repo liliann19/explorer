@@ -36,7 +36,19 @@ public class ExplorerSearch {
     }
 
     private static int reachableArea(int[] currentLoc, int[][] island, boolean[][] visited) {
-        return 0;
+        int curR = currentLoc[0];
+        int curC = currentLoc[1];
+
+        if (visited[curR][curC]) return 0;
+
+        visited[curR][curC] = true;
+
+        int area = 1;
+
+        for (int[] move : possibleMoves(island, currentLoc)) {
+            area += reachableArea(move, island, visited);
+        }
+        return area;
     }
 
     public static List<int[]> possibleMoves(int[][] island, int[] location) {
