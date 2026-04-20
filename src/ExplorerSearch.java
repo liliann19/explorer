@@ -44,6 +44,13 @@ public class ExplorerSearch {
     }
 
     public static int[] explorerLocation(int[][] island) {
-        return null;
+        for (int row = 0; row < island.length; row++) {
+            for (int col = 0; col < island[0].length; col++) {
+                if (island[row][col] == 0) {
+                    return new int[]{row, col};
+                }
+            }
+        }
+        throw new IllegalArgumentException("No explorer present");
     }
 }
