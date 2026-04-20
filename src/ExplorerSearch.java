@@ -34,4 +34,16 @@ public class ExplorerSearch {
         // I STRONGLY RECOMMEND testing some helpers you might make too
         return -1;
     }
+
+    private static int reachableArea(int[] currentLoc, int[][] island, boolean[][] visited) {
+        return 0;
+    }
+
+    public static List<int[]> possibleMoves(int[][] island, int[] location) {
+        return null;
+    }
+
+    public static int[] explorerLocation(int[][] island) {
+        return null;
+    }
 }
